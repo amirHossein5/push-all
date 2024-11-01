@@ -11,6 +11,8 @@ import (
 	"strings"
 )
 
+var Version = "dev"
+
 type DirEntry struct {
 	fullPath string
 	fs       fs.DirEntry
@@ -18,6 +20,7 @@ type DirEntry struct {
 
 func main() {
 	if len(os.Args) != 2 {
+		fmt.Println("Version:", Version)
 		fmt.Println("Usage: push-all <path>")
 		os.Exit(1)
 	}
