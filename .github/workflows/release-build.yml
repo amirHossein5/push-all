@@ -22,4 +22,5 @@ jobs:
           binary_name: "push-all"
           pre_command: export CGO_ENABLED=0
           asset_name: push-all-${{ matrix.goos }}-${{ matrix.goarch }}
+          md5sum: false
           ldflags: -X "main.Version=${{ github.ref_name }}"
